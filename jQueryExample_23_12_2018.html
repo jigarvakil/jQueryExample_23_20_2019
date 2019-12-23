@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>jQuery Example</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+	<body>
+		
+			<div class="container">
+				<h3>Addition of two number using jquery</h3>
+				<hr/>
+				<div class="row">
+					<div class="col-md-4" align="right">
+						Number 1
+					</div>
+					<div class="col-md-4">
+						<div class="input-group">
+							<span class="input-group-addon">
+							<i class="fa fa-inr"></i></span>
+							<input type="number" min="1" class="form-control" placeholder="Number 1" id="txtN1"/>
+						</div>
+					</div>
+				</div>
+				<br/>
+				<div class="row">
+					<div class="col-md-4" align="right">
+						Number 2
+					</div>
+					<div class="col-md-4">
+						<input type="text" class="form-control" placeholder="Number 2" id="txtN2"/>
+					</div>
+				</div>
+				<br/>
+				<div class="row">
+					<div class="col-md-4" align="right">
+						
+					</div>
+					<div class="col-md-4">
+						<button  class="btn btn-success" id="btnA">Addition</button>
+					</div>
+				</div>
+				<br/>
+				<div class="row">
+					<div class="col-md-4" align="right">
+						Answer
+					</div>
+					<div class="col-md-4">
+						<input type="text" class="form-control" placeholder="Answer" id="txtN3"/>
+					</div>
+				</div>
+			</div>
+		
+		<script>
+			$(document).ready(function(){
+				$('#txtN2').change(function(){
+					var a=$('#txtN1').val();
+					var b=$('#txtN2').val();
+					var c=parseInt(a)+parseInt(b);
+					$('#txtN3').val(c);
+				});
+				$('#btnA').change(function(){
+					var a=$('#txtN1').val();
+					var b=$('#txtN2').val();
+					var c=parseInt(a)+parseInt(b);
+					$('#txtN3').val(c);
+				});
+			});
+		</script>
+	</body>
+</html>
